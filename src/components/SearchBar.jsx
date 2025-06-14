@@ -47,7 +47,7 @@ export default function SearchBar() {
   useEffect(() => {
     const fetchFilterData = async () => {
       try {
-        const res = await axios.get('/filterData.json');
+        const res = await axios.get(`${process.env.PUBLIC_URL}/filterData.json`);
         setArtistOptions(Object.keys(res.data.artists)); // ✅ Array of artist names
 setTitleOptions([]); // titles are now dynamic
 setAllArtistData(res.data.artists); // <-- you'll need this to access titles later

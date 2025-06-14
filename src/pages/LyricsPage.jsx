@@ -63,7 +63,7 @@ export default function LyricsPage() {
   useEffect(() => {
     const fetchLyrics = async () => {
       try {
-        const response = await axios.get("/lyrics.json");
+        const response = await axios.get(`${process.env.PUBLIC_URL}/lyrics.json`);
         const data = response.data;
 
         const song = data.find(
