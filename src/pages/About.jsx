@@ -48,7 +48,7 @@ function About() {
   return (
     <Container maxWidth="sm" sx={{ mt: 8, mb: 6 }}>
       <InfoBox>
-        <StyledAvatar alt="App Logo" src="/Akhil.jpg" />
+        <StyledAvatar alt="App Logo" src={`${process.env.PUBLIC_URL}/Akhil.jpg`} />
 
         <Title>Lyrics by Akhil</Title>
         <Subtitle>Your gateway to discovering song lyrics quickly and easily.</Subtitle>
