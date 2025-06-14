@@ -64,6 +64,7 @@ export default function LyricsPage() {
     const fetchLyrics = async () => {
       try {
         const response = await axios.get(`${process.env.PUBLIC_URL}/lyrics.json`);
+
         const data = response.data;
 
         const song = data.find(
